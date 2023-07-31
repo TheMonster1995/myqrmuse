@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import LoginForm from './LoginForm';
 import ForgotPasswordForm from './ForgotPasswordForm';
+import SectionWrapper from 'pages/Landing/SectionWrapper';
 
 const Login: React.FC = () => {
   const [cmpState, setCmpState] = useState<
@@ -14,7 +15,7 @@ const Login: React.FC = () => {
   };
 
   return (
-    <section className="h-96">
+    <SectionWrapper className="h-[48vh]">
       {cmpState === 'login' ? (
         <LoginForm
           onForgotPassword={toggleCmpState}
@@ -26,7 +27,7 @@ const Login: React.FC = () => {
           defaultUsername={username}
         />
       )}
-    </section>
+    </SectionWrapper>
   );
 };
 

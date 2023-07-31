@@ -24,8 +24,8 @@ export const routes = [
   {
     id: '04',
     path: '/',
-    element: () => null,
-    loginRequire: true,
+    element: () => loadable(() => import('pages/Landing/Landing')),
+    loginRequired: false,
   },
 ];
 

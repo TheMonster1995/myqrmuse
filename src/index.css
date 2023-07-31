@@ -1,7 +1,57 @@
 /* @tailwind base; */
 @tailwind components;
 @tailwind utilities;
+/* @import url(./fonts/Mirza-Bold.ttf);
+@import url(./fonts/Mirza-Medium.ttf);
+@import url(./fonts/Mirza-Regular.ttf);
+@import url(./fonts/Mirza-SemiBold.ttf); */
+
+@font-face {
+  font-family: MirzaRegular;
+  src: url(../public/fonts/Mirza-Regular.ttf);
+}
+
+@font-face {
+  font-family: MirzaMedium;
+  src: url(../public/fonts/Mirza-Medium.ttf);
+}
+
+@font-face {
+  font-family: MirzaSemiBold;
+  src: url(../public/fonts/Mirza-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: MirzaBold;
+  src: url(../public/fonts/Mirza-Bold.ttf);
+}
+
+@font-face {
+  font-family: Syne;
+  src: url(../public/fonts/Syne-VariableFont_wght.ttf);
+}
 
 body {
   background-color: #ecf0f1;
+  margin: 0;
+}
+
+.text-mirza-base {
+  font-family: 'MirzaRegular', sans-serif !important;
+}
+
+.text-mirza-medium {
+  font-family: 'MirzaMedium', sans-serif !important;
+}
+
+.text-mirza-semiBold {
+  font-family: 'MirzaSemiBold', sans-serif !important;
+}
+
+.text-mirza-bold {
+  font-family: 'MirzaBold', sans-serif !important;
+}
+
+.text-syne {
+  font-family: 'Syne', sans-serif !important;
 }

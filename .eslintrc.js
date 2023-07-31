@@ -52,20 +52,20 @@ module.exports = {
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/no-unused-vars": "warn",
     "@typescript-eslint/indent": "off",
-    "@typescript-eslint/no-explicit-any": "error",
-    "react-hooks/exhaustive-deps": "error",
+    "@typescript-eslint/no-explicit-any": "warn",
+    "react-hooks/exhaustive-deps": "warn",
     "@typescript-eslint/comma-dangle": "off",
     "@typescript-eslint/no-loop-func": "off",
     "@typescript-eslint/naming-convention": "off",
-    "prettier/prettier": [
-      "error",
-      {
-        singleQuote: true,
-        trailingComma: "all",
-        bracketSpacing: true,
-        jsxBracketSameLine: false,
-        endOfLine: "auto",
-      },
-    ],
+    // "prettier/prettier": [
+    //   "warning",
+    //   {
+    //     singleQuote: true,
+    //     trailingComma: "all",
+    //     bracketSpacing: true,
+    //     jsxBracketSameLine: false,
+    //     endOfLine: "auto",
+    //   },
+    // ],
   },
 };

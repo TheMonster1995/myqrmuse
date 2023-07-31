@@ -4,6 +4,7 @@ import { Box } from '@mui/material';
 import React from 'react';
 import Preview from './Preview';
 import { useParams } from 'react-router-dom';
+import SectionWrapper from 'pages/Landing/SectionWrapper';
 // import { useSearchParams } from 'react-router-dom';
 
 const Display: React.FC = () => {
@@ -30,14 +31,14 @@ const Display: React.FC = () => {
   // }
 
   return (
-    <Box>
+    <SectionWrapper>
       {/* <iframe src="http://eclient.imnstr.com/no_image.jpg"></iframe> */}
       <Preview
         url={id ? `preview/${id}` : null}
         className="mt-8"
-        iClassName="mx-auto border-0 w-full h-[92vh]"
+        iClassName="mx-auto w-full"
       />
-    </Box>
+    </SectionWrapper>
   );
 };
 

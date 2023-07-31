@@ -7,6 +7,7 @@ import { routes } from './routesList';
 import Header from 'components/wrapper/Header';
 import { AuthContext } from 'store/authContext';
 import Wait from './Wait';
+import Footer from 'components/wrapper/Footer';
 
 const Routes: React.FC = () => {
   const { isAuthorized } = useContext(AuthContext);
@@ -42,6 +43,7 @@ const Routes: React.FC = () => {
       ) : (
         <BrowserRoutes>{renderRoutes()}</BrowserRoutes>
       )}
+      <Footer />
     </>
   );
 };

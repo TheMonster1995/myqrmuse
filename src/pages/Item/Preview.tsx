@@ -1,4 +1,5 @@
 import { Box } from '@mui/material';
+import classNames from 'classnames';
 // import mqmApi from 'axios/mqmApi';
 // import React, { useState } from 'react';
 import React from 'react';
@@ -18,7 +19,7 @@ const Preview: React.FC<Props> = ({ url, className, iClassName }) => {
 
   return (
     <Box className={className}>
-      <iframe src={finalUrl} className={iClassName}></iframe>
+      <iframe src={finalUrl} className={classNames(iClassName, 'border-0 h-[28vh]')}></iframe>
       {/* <iframe src={`http://eclient.imnstr.com/no_image.jpg`}></iframe> */}
     </Box>
   );
