@@ -115,10 +115,10 @@ const CreationTab: React.FC<ITabProps> = ({ hidden }) => {
 
   const getCurrFileContent = () => {
     if (!currFile) return (
-      <>
+      <Box className="w-full flex justify-center items-center">
         <WebStories />
-        <Typography variant="caption">Waiting for your story</Typography>
-      </>
+        <Typography variant="caption" className="ml-4 text-syne text-xl">Waiting for your story</Typography>
+      </Box>
     )
     return (
       <>
@@ -146,7 +146,7 @@ const CreationTab: React.FC<ITabProps> = ({ hidden }) => {
 
   return (
     <Box className="py-8">
-      <Preview url={currFile ? `preview/${userid}` : null} />
+      {!currFile ? null : <Preview url={`preview/${userid}`} />}
       <Box className="bg-gray-300 rounded-xl px-4 py-2 my-4 w-fit mx-auto">
         {getCurrFileContent()}
       </Box>

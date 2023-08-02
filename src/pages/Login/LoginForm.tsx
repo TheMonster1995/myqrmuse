@@ -54,15 +54,15 @@ const LoginForm: React.FC<Props> = ({ onForgotPassword, defaultUsername }) => {
   // const handleResetPassword = () =>
   //   onForgotPassword(getValues('username'), 'forgotPassword');
 
-  const renderInput = (inputProps: TTFProps) => <TextField {...inputProps} />;
+  const renderInput = (inputProps: TTFProps) => <TextField {...inputProps} className={classNames(inputProps.className, 'text-syne')} />;
 
   return (
-    <Box className="flex flex-col items-start justify-around pl-12 h-full">
-      <Typography variant="h1">Login</Typography>
+    <Box className="flex flex-col items-start justify-start pl-12">
+      <Typography variant="h1" className="text-syne">Login</Typography>
       <form
         onSubmit={handleSubmit(onSubmit)}
         noValidate
-        className="h-48 flex flex-col justify-between w-96"
+        className="flex flex-col justify-between w-96"
       >
         {renderField(
           { title: 'Username', error: errors.username ? true : null },
@@ -98,16 +98,16 @@ const LoginForm: React.FC<Props> = ({ onForgotPassword, defaultUsername }) => {
         <Button
           variant="contained"
           color="primary"
-          className="w-full"
+          className="w-full my-4 text-syne"
           onClick={() => handleSubmit(onSubmit)()}
           disabled={isLoading}
         >
           <LoadingWrapper />
         </Button>
       </form>
-      <Button variant="text" color="secondary" onClick={() => null}>
+      <Button variant="text" color="secondary" onClick={() => null} className="text-syne tracking-widest">
         {
-          'Have a good day :)' //Reset Password
+          'Inspiration awaits you :)' //Reset Password
         }
       </Button>
     </Box>
@@ -125,12 +125,12 @@ export const renderField = (
   { displayTitle = true, titleClassName = '', title, error = null },
   { required = false, name, render, control },
 ): JSX.Element => (
-  <Box>
+  <Box className="my-4">
     {displayTitle ? (
       <Typography
         className={classNames(
           titleClassName,
-          'font-semibold text-sm mb-2',
+          'font-semibold text-sm mb-2 text-syne',
           error && 'text-red-800',
         )}
       >

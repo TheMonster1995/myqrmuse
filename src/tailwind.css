@@ -607,10 +607,6 @@ video {
   grid-column: span 2 / span 2;
 }
 
-.row-span-2 {
-  grid-row: span 2 / span 2;
-}
-
 .\!m-0 {
   margin: 0px !important;
 }
@@ -679,12 +675,16 @@ video {
   margin-top: 0.375rem;
 }
 
+.mt-4 {
+  margin-top: 1rem;
+}
+
 .mt-8 {
   margin-top: 2rem;
 }
 
-.mt-4 {
-  margin-top: 1rem;
+.ml-4 {
+  margin-left: 1rem;
 }
 
 .block {
@@ -763,6 +763,10 @@ video {
   width: 12rem;
 }
 
+.w-56 {
+  width: 14rem;
+}
+
 .w-6 {
   width: 1.5rem;
 }
@@ -787,10 +791,6 @@ video {
 
 .w-screen {
   width: 100vw;
-}
-
-.w-56 {
-  width: 14rem;
 }
 
 .min-w-\[33\%\] {
@@ -834,10 +834,6 @@ video {
   align-items: flex-start;
 }
 
-.items-end {
-  align-items: flex-end;
-}
-
 .items-center {
   align-items: center;
 }
@@ -852,10 +848,6 @@ video {
 
 .justify-center {
   justify-content: center;
-}
-
-.\!justify-between {
-  justify-content: space-between !important;
 }
 
 .justify-between {
@@ -1007,11 +999,6 @@ video {
   padding-bottom: 0.25rem;
 }
 
-.py-12 {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -1035,20 +1022,12 @@ video {
   padding-left: 2rem;
 }
 
-.pt-8 {
-  padding-top: 2rem;
-}
-
 .text-left {
   text-align: left;
 }
 
 .text-center {
   text-align: center;
-}
-
-.text-right {
-  text-align: right;
 }
 
 .\!text-2xl {
@@ -1101,14 +1080,14 @@ video {
   line-height: 1.25rem;
 }
 
-.text-xs {
-  font-size: 0.75rem;
-  line-height: 1rem;
-}
-
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 
 .font-semibold {
@@ -1117,6 +1096,10 @@ video {
 
 .capitalize {
   text-transform: capitalize;
+}
+
+.tracking-widest {
+  letter-spacing: 0.1em;
 }
 
 .text-\[\#626262\] {

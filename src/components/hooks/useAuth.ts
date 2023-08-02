@@ -10,6 +10,7 @@ type ReturnType = {
   checkAuth: () => Promise<boolean>;
   authorize: (username: string, password: string) => Promise<boolean>;
   logout: () => void;
+  signup: (token: string, username: string, password: string, email?: string) => Promise<boolean>;
 };
 
 const useAuth = (): ReturnType => {
@@ -61,6 +62,28 @@ const useAuth = (): ReturnType => {
     return true;
   };
 
+  const signup = async (token, username, password, email = '',) => {
+    const encPassword = encrypt(password);
+
+    try {
+      const signup = await mqmApi.post(
+        `/signup/${token}`,
+        { username, password: encPassword, email },
+        {
+          headers: { 'Content-Type': 'application/json' },
+        },
+      );
+
+      localStorage.setItem('accesstoken', signup.data.payload.accessToken);
+      localStorage.setItem('user_id__mqm', signup.data.payload.userid);
+      updateAuth(true);
+    } catch (err) {
+      return false;
+    }
+
+    return true;
+  };
+
   const logout = () => {
     localStorage.removeItem('accesstoken');
     localStorage.removeItem('userid__mqm');
@@ -68,7 +91,7 @@ const useAuth = (): ReturnType => {
     navigate('/login');
   };
 
-  return { isAuthorized, authorize, logout, checkAuth };
+  return { isAuthorized, authorize, logout, checkAuth, signup };
 };
 
 export default useAuth;

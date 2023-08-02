@@ -19,9 +19,8 @@ const QRTab: React.FC<ITabProps> = ({ hidden }) => {
       let res;
       try {
         res = await qrTigerApi.post(`/api/qr/static`, {
-          data: {
-            text: `http://myqrmuse.com/user/${userid}`
-          } 
+          "text": `http://myqrmuse.com/user/${userid}`,
+          "qrCategory": "url",
         });
 
         setResponse(res.data.url);

@@ -27,6 +27,12 @@ export const routes = [
     element: () => loadable(() => import('pages/Landing/Landing')),
     loginRequired: false,
   },
+  {
+    id: '05',
+    path: '/invite/:token',
+    element: () => loadable(() => import('pages/Signup/Signup')),
+    loginRequired: false,
+  },
 ];
 
 //

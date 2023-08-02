@@ -12,12 +12,10 @@ const InvitesTab: React.FC<ITabProps> = ({ hidden }) => {
   const { enqueueSnackbar } = useSnackbar();
 
   useEffect(() => {
-    if (response) return;
-
     const getInviteData = async () => {
       let res: any;
       try {
-        res = await mqmApi.get(`/user/invite/${userid}/`, {
+        res = await mqmApi.get(`/user/invites/${userid}/`, {
           headers: {
             'Content-Type': 'application/json',
             accesstoken,
